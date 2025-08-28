@@ -1,0 +1,29 @@
+/* Sanity Studio specific styles to prevent hydration issues */
+
+/* Hide elements that might cause hydration issues during initial load */
+[bis_skin_checked] {
+  animation: none !important;
+}
+
+/* Ensure consistent rendering */
+.sanity-studio {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent layout shifts */
+#sanity {
+  min-height: 100vh;
+  height: 100vh;
+  max-height: 100dvh;
+  overscroll-behavior: none;
+}
+
+/* Suppress hydration-related flickering */
+.sc-hwkwBN,
+.sc-kNOymR,
+.StyledText-sc-11ov82j-0,
+.StyledSpinner-sc-124hnd0-0 {
+  transition: none !important;
+  animation-duration: 0s !important;
+}
